@@ -3,8 +3,8 @@ resource "null_resource" "install-webservice" {
   connection {
     type = "ssh"
     host = data.azurerm_public_ip.ip_publico.ip_address
-    user = "admuser"
-    password = "Password123456!"
+    user = var.user
+    password = var.pwd_user
   }
 
   provisioner "remote-exec" {

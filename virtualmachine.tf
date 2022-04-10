@@ -21,8 +21,8 @@ resource "azurerm_virtual_machine" "vmmaquina" {
 
   os_profile {
     computer_name  = "hostname"
-    admin_username = "admuser"
-    admin_password = "Password123456!"
+    admin_username = var.user
+    admin_password = var.pwd_user
   }
 
   os_profile_linux_config {
